@@ -1,32 +1,11 @@
-# Express API Starter
+# Fruit List API
 
-How to use this template:
+This is a simple Express server that provides an API endpoint to fetch fruit data from the [Fruityvice API](https://www.fruityvice.com/). The server has been developed to bypass the CORS policy restrictions imposed by the Fruityvice API. It is part of my front-end interview task app [Fruit List](https://github.com/jansoldat/fruit-list-service), deployed on [Vercel](https://fruit-list-api.vercel.app/api/fruit/all)
 
-```sh
-npx create-express-api --directory my-api-name
-```
+## Features
 
-Includes API Server utilities:
-
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-* [cors](https://www.npmjs.com/package/cors)
-  * CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
-
-Development utilities:
-
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [jest](https://www.npmjs.com/package/jest)
-  * Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
+- **CORS Handling:** Fix Fruityvice API to handle CORS policy.
+- **API Endpoint:** `/api/fruit/all` - Fetches data from the Fruityvice API and returns it to the client.
 
 ## Setup
 
@@ -40,14 +19,41 @@ npm install
 npm run lint
 ```
 
-## Test
-
-```
-npm test
-```
-
 ## Development
 
 ```
 npm run dev
 ```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/fruit-service.git
+   cd fruit-service
+   ```
+
+2. Install the dependencies:
+
+```bash
+pnpm install
+```
+
+4. Running the Server
+   To start the server, run:
+
+```bash
+npm start
+```
+
+## Accessing the API
+
+- Development: Access the API at `http://localhost:8080/api/fruit/all`.
+- Production: Access the API at `https://fruit-list-api.vercel.app/api/fruit/all`.
