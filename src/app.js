@@ -20,6 +20,22 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/api/fruit/all', (req, res) => {
+  const options = {
+    method: 'GET',
+    url: 'https://www.fruityvice.com/api/fruit/all',
+  };
+
+  fetch
+    .request(options)
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+});
+
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
