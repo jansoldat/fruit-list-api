@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const axios = require('axios');
 const helmet = require('helmet');
 const cors = require('cors');
 
@@ -26,7 +27,7 @@ app.get('/api/fruit/all', (req, res) => {
     url: 'https://www.fruityvice.com/api/fruit/all',
   };
 
-  fetch
+  axios
     .request(options)
     .then((response) => {
       res.json(response.data);
